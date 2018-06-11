@@ -1,0 +1,14 @@
+   ___ O QUE EU FARIA DIFERENTE ___
+
+ 1) Fazer classes
+     - Para BD
+     - Para cada parte do formulário (usar public event ..., e passar formulario como parâmetro)
+     - Inimigo
+     - Obstáculo
+
+ 2) Usar canvas ao invés de imagens
+     - Muito mais rápido, gasta menos processamento e menos leg (MonoGame.net)
+
+ 3) Usar endereço de broadcast para ver usuários disponíveis ao invés de banco (menos requisição ao banco, mais rápido)
+
+ 4) se ele clicar para cima e para o lado, ou para cima e para o outro lado, aceitar e fazer as duas coisas

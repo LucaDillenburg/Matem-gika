@@ -1,0 +1,46 @@
+   ___ JOGO EDUCATIVO ___
+
+jogo interativo que tem varias fases:
+
+oq tera em cada fase
+ - explicacao do conteudo
+ - jogo 2D (tipo Super Mario) que para jogar "feitiços" precisa-se responder quizes (enquanto o quiz está sendo respondido, o jogo continua)
+
+ideia: fazer um "KUMON" interativo
+
+
+-> CADASTRO E LOGIN dos usuários (banco de dados)
+-> Fases, pontos, moeda (novos personagens, roupas, cabelos diferentes)
+   - pagina com os leveis: quais completos, quantas estrelas, quais disponiveis (num "MAPA")
+
+   - explicacao do conteúdo
+
+   - jogo: 
+	aprox 4 quizes por level + 1 quiz mais dificil no final de cada level
+	cada level tem um numero de estrelas (máx 3).
+	numero de estrelas no level = 3 - (qts vezes morreu). se errou 3 quizes ou perdeu todas as vidas: refazer o level
+	se acertar o quiz dificil: ganha mais xp e se acertou todas as outras, estrelas ficam cor "ouro"; se n, eh como se ele tivesse acertado os outros quizes
+	se erra a opcao do quiz, a opcao some, ele tem q responder de novo
+
+
+
+OPCOES DE JOGO:
+ - ir para frente (direita), se nao ha obstaculo
+ - ir para trás (esquerda), se nao ha obstaculo
+ - pular (Timer q muda o y do personagem se nao ha obstaculos em cima, variavel boolean pulando: enquanto está no ar não pode pular de novo)
+ - abaixar??
+
+ - obstaculos que se mexem: timer que muda a posicao de todos os obstaculos
+
+
+
+
+
+
+LEVEIS:
+ - Aritmética
+ - Fração
+ - Álgebra
+ - Produto Notável
+ - Equação
+...
