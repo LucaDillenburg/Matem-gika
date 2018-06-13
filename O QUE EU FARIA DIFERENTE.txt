@@ -2,7 +2,7 @@
 
  1) Fazer classes
      - Para BD
-     - Para cada parte do formulário (usar public event ..., e passar formulario como parâmetro)
+     - Para cada parte do formulário (ex: menu, comprarPersonagens, multiplayer, levels, explicacao, jogo). (usar public event ..., e passar formulario como parâmetro)
      - Inimigo
      - Obstáculo
 
@@ -11,10 +11,17 @@
 
  3) Usar endereço de broadcast para ver usuários disponíveis ao invés de banco (menos requisição ao banco, mais rápido)
 
- 4) se ele clicar para cima e para o lado, ou para cima e para o outro lado, aceitar e fazer as duas coisas
+ 4) Se ele clicar para cima e para o lado, ou para cima e para o outro lado, aceitar e fazer as duas coisas
 
- 5) Musicas (uma no home, outra no jogo, outra na compra de personagens)
+ 5) Músicas (uma no home, outra no jogo, outra na compra de personagens). Opcao para tirar música
 
  6) Imagem no aplicativo ("icone")
 
  7) Senha forte
+
+
+   ___ O QUE EU FIZ BEM ___
+ - Dar opcoes de nomes (nesse caso, com numeros ao final)
+ - Random que vai tirando as opcoes (porém fazer com lista ao invés de vetor)
+ - Pular linha nos espaços (com int qtdCaracNumaLinha). Quebra de linha automático nas palavras (word-break)
+ - Criar botoes, labels e pictureBoxes
