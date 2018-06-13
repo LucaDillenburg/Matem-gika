@@ -1,5 +1,4 @@
 ﻿/*atencao esta é a versao mais nova, o multiplayer provavelmente contém falhas inusitadas*/
-//continuar checando matemagika cm socket - copiaint
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +22,8 @@ using System.Net.Sockets;
 //fonte personalizada
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
+//musica
+using System.Media;
 
 namespace Jogo_Educativo
 {
@@ -47,7 +48,7 @@ namespace Jogo_Educativo
         protected int moedas;
 
         //banco
-        protected string connStr = Jogo_Educativo.Properties.Settings.Default.BDPRII17188ConnectionString;
+        protected string connStr = Jogo_Educativo.Properties.Settings.Default.BDPRII17188ConnectionString1;
         protected SqlConnection con;
 
         //leveis
@@ -168,11 +169,11 @@ namespace Jogo_Educativo
 
         //fonte personalizada
         [DllImport("gdi32.dll")]
-        private static extern IntPtr AddFontMemResourceEx(IntPtr pbfont, uint cbfont,
+        protected static extern IntPtr AddFontMemResourceEx(IntPtr pbfont, uint cbfont,
                               IntPtr pdv, [In] ref uint pcFonts);
 
-        FontFamily ff;
-        Font font;
+        protected FontFamily ff;
+        protected Font font;
 
         //aux
         protected int aux = 0;
@@ -182,7 +183,10 @@ namespace Jogo_Educativo
         public bool podeClose = false;
 
         //thread
-        Thread t;
+        protected Thread t;
+
+        //musica
+        protected SoundPlayer music;
 
         public Principal()
         {
@@ -620,8 +624,8 @@ namespace Jogo_Educativo
             this.lbLeveis = new System.Windows.Forms.Label[this.qtsLv];
             this.picEstrelas = new System.Windows.Forms.PictureBox[this.qtsLv, 3];
 
-            this.lbTitulo.Location = new Point(320, 5);
-            this.lbTitulo.Text = "LEVEIS";
+            this.lbTitulo.Location = new Point(270, 5);
+            this.lbTitulo.Text = "LEVELS";
             this.lbTitulo.Visible = true;
 
             int qtdHeight = 0;
@@ -1325,6 +1329,7 @@ namespace Jogo_Educativo
                         this.tmrRevivendo.Enabled = this.poderPulandoRevivendoQuiz[2];
                         this.tmrTempoQuiz.Enabled = this.poderPulandoRevivendoQuiz[3];
                         this.jahViuExplicacao = true;
+                        this.Focus();
                     }
                     else
                         this.iniciarLevel();
@@ -1672,12 +1677,21 @@ namespace Jogo_Educativo
 
             this.btnVoltar.Location = new Point(18, 118);
             this.btnVoltar.Visible = true;
-            this.btnHome.Visible = true;
             this.picBtnVoltar.Visible = true;
-            this.picBtnHome.Visible = true;
+
+            if(etapa != 6)
+            {
+                this.btnHome.Visible = true;
+                this.picBtnHome.Visible = true;
+            }
 
             this.btnVoltar.Enabled = false;
             this.btnHome.Enabled = false;
+
+            this.music.Stop();
+            this.music = new System.Media.SoundPlayer();
+            this.music.Stream = Properties.Resources.JOGO_Magicka;
+            this.music.PlayLooping();
 
             this.Focus();
         }
@@ -2713,7 +2727,7 @@ namespace Jogo_Educativo
                     this.tmrAux.Enabled = false;
                     this.tirarJogoDaTela();
                     if (this.etapa == 6)
-                        this.mostrarHome();
+                        this.mostrarHome(true);
                     else
                         this.mostrarBtnLeveis();
                     Application.DoEvents();
@@ -2724,16 +2738,18 @@ namespace Jogo_Educativo
                     if (this.etapa == 6)
                     {
                         this.desmostrarExplicacao(true);
-                        this.mostrarHome();
+                        this.mostrarHome(true);
                     }
                     else
                         this.mostrarBtnLeveis();
+                    this.tocarMusicMenu();
                     Application.DoEvents();
                     break;
                 case 9:
                     this.tmrAux.Enabled = false;
                     this.tirarJogoDaTela();
-                    this.mostrarHome();
+                    this.mostrarHome(true);
+                    this.tocarMusicMenu();
                     Application.DoEvents();
                     break;
                 case 10:
@@ -3042,7 +3058,7 @@ namespace Jogo_Educativo
         protected void colocarXPTela()
         {
             int[] nlvXp = this.xpNivel(this.xp);
-            this.lbNivel.Text = "Nivel: " + nlvXp[0];
+            this.lbNivel.Text = "Nv" + nlvXp[0];
             this.prgXp.Maximum = nlvXp[2];
             this.prgXp.Value = nlvXp[1];
             this.lbXp.Text = nlvXp[1] + "/" + nlvXp[2];
@@ -3280,7 +3296,7 @@ namespace Jogo_Educativo
             {
                 case 2:
                     this.desmostrarLeveis();
-                    this.mostrarHome();
+                    this.mostrarHome(false);
                     Application.DoEvents();
                     break;
                 case 3:
@@ -3292,7 +3308,7 @@ namespace Jogo_Educativo
                     this.desmostrarPersonagens();
 
                     if (this.antesPersEhMenu)
-                        this.mostrarHome();
+                        this.mostrarHome(false);
                     else
                         this.mostrarBtnLeveis();
                     break;
@@ -3316,8 +3332,6 @@ namespace Jogo_Educativo
                     this.prgPoder.Visible = true;
                     this.picMoedas.Visible = true;
                     this.lbMoedas.Visible = true;
-                    this.picBtnHome.Visible = true;
-                    this.btnHome.Visible = true;
                     this.picBtnVoltar.Visible = true;
                     this.lbXp.Visible = true;
                     this.lbIndicarXP.Visible = true;
@@ -3349,7 +3363,7 @@ namespace Jogo_Educativo
                     break;
                 case 8:
                     this.desmostrarRanking();
-                    this.mostrarHome();
+                    this.mostrarHome(false);
                     Application.DoEvents();
                     break;
                 case 9:
@@ -3366,7 +3380,7 @@ namespace Jogo_Educativo
             Application.DoEvents();
         }
 
-        protected void mostrarHome()
+        protected void mostrarHome(bool tocarMusica)
         {
             this.etapa = 1;
 
@@ -3393,7 +3407,23 @@ namespace Jogo_Educativo
             this.btnLogout.Visible = true;
             this.btnVoltar.Enabled = true;
 
+            if(tocarMusica)
+                this.tocarMusicMenu();
+
             this.btnMostrarLeveis.Focus();
+        }
+
+        protected void tocarMusicMenu()
+        {
+            try
+            {
+                this.music.Stop();
+            }
+            catch (Exception e) { }
+
+            this.music = new System.Media.SoundPlayer();
+            this.music.Stream = Properties.Resources.MENU_Magicka;
+            this.music.PlayLooping();
         }
 
         protected void desmostrarHome()
@@ -3437,6 +3467,7 @@ namespace Jogo_Educativo
         {
             this.insertUsDispon(false);
             //sock_Servidor.Close();
+            this.music.Stop();
             this.desmostrarHome();
             this.mostrarLogin();
             Application.DoEvents();
@@ -3453,6 +3484,10 @@ namespace Jogo_Educativo
             this.insertUsDispon(false);
             //sock_Servidor.Close();
             splash.fechar();
+            try
+            {
+                this.music.Stop();
+            }catch(Exception err) { }
         }
 
 
@@ -3485,6 +3520,7 @@ namespace Jogo_Educativo
             this.txtSenha.Location = new Point(this.txtUsuario.Location.X, 228);
             this.btnVerSenha.Location = new Point(740, this.txtSenha.Location.Y + 3);
             this.btnLogarCadastrar.Text = "Login";
+            this.lbTitulo.Location = new Point(320, 5);
             this.lbTitulo.Text = "Login";
             this.lbMudarLoginCadastro.Text = "Não tem uma conta? Cadastre-se aqui.";
 
@@ -3507,6 +3543,7 @@ namespace Jogo_Educativo
             this.txtSenha.Location = new Point(this.txtUsuario.Location.X, 181);
             this.btnVerSenha.Location = new Point(740, this.txtSenha.Location.Y + 3);
             this.btnLogarCadastrar.Text = "Cadastrar";
+            this.lbTitulo.Location = new Point(200, 5);
             this.lbTitulo.Text = "Cadastro";
             this.lbMudarLoginCadastro.Text = "Já tem uma conta? Faça login clicando aqui.";
 
@@ -3597,7 +3634,7 @@ namespace Jogo_Educativo
             if (cadastrou)
                 this.btnExplicacaoJogo_Click(null, null);
             else
-                this.mostrarHome();
+                this.mostrarHome(true);
         }
 
         protected void btnLogarCadastrar_Click(object sender, EventArgs e)
@@ -4169,6 +4206,7 @@ namespace Jogo_Educativo
 
             adapt.Fill(ds);
 
+            this.lbTitulo.Location = new Point(320, 5);
             this.lbTitulo.Text = "RANKING";
             this.lbTitulo.Visible = true;
 
@@ -4394,7 +4432,6 @@ namespace Jogo_Educativo
             AllocFont(font, this.lbVidas, 10);
             AllocFont(font, this.lbQuizesErrados, 10);
             AllocFont(font, this.lbTitulo, 44);
-            //AllocFont(font, this.lbMoedas, 13);
             AllocFont(font, this.lbPoder, 15);
             AllocFont(font, this.lbIndicarXP, 12);
             AllocFont(font, this.lbNivel, 15);

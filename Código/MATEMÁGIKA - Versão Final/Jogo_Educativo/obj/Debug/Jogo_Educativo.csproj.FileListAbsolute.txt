@@ -367,3 +367,25 @@ F:\MATEMÁGIKAn\Jogo_Educativo\obj\Debug\Jogo_Educativo.csproj.GenerateResource.
 F:\MATEMÁGIKAn\Jogo_Educativo\obj\Debug\Jogo_Educativo.csproj.CoreCompileInputs.cache
 F:\MATEMÁGIKAn\Jogo_Educativo\obj\Debug\Jogo_Educativo.exe
 F:\MATEMÁGIKAn\Jogo_Educativo\obj\Debug\Jogo_Educativo.pdb
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\bin\Debug\Jogo_Educativo.exe.config
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\bin\Debug\Jogo_Educativo.exe
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\bin\Debug\Jogo_Educativo.pdb
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.csprojResolveAssemblyReference.cache
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.Principal.resources
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.Properties.Resources.resources
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.Splash.resources
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.csproj.GenerateResource.Cache
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.csproj.CoreCompileInputs.cache
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.exe
+F:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia\Jogo_Educativo\obj\Debug\Jogo_Educativo.pdb
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\bin\Debug\Jogo_Educativo.exe.config
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\bin\Debug\Jogo_Educativo.exe
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\bin\Debug\Jogo_Educativo.pdb
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.csprojResolveAssemblyReference.cache
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.Principal.resources
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.Properties.Resources.resources
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.Splash.resources
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.csproj.GenerateResource.Cache
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.csproj.CoreCompileInputs.cache
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.exe
+D:\COTUCA\Tecnico\PPII\Código\Código MATEMÁGIKA\MATEMÁGIKA - Versão Final - Cópia - Copia\Jogo_Educativo\obj\Debug\Jogo_Educativo.pdb

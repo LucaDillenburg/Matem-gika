@@ -521,6 +521,15 @@ namespace Jogo_Educativo.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream JOGO_Magicka {
+            get {
+                return ResourceManager.GetStream("JOGO_Magicka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap loading {
@@ -557,6 +566,15 @@ namespace Jogo_Educativo.Properties {
             get {
                 object obj = ResourceManager.GetObject("matemagika", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MENU_Magicka {
+            get {
+                return ResourceManager.GetStream("MENU_Magicka", resourceCulture);
             }
         }
         

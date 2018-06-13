@@ -45,9 +45,9 @@
             // pic
             // 
             this.pic.BackColor = System.Drawing.Color.Transparent;
-            this.pic.Location = new System.Drawing.Point(22, 215);
+            this.pic.Location = new System.Drawing.Point(22, 186);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(55, 70);
+            this.pic.Size = new System.Drawing.Size(54, 70);
             this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic.TabIndex = 2;
             this.pic.TabStop = false;
@@ -56,7 +56,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Jogo_Educativo.Properties.Resources.matemagika;
-            this.pictureBox1.Location = new System.Drawing.Point(158, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(100, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(356, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Jogo_Educativo.Properties.Resources.Wallpaper1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(657, 309);
+            this.ClientSize = new System.Drawing.Size(562, 278);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pic);
             this.Cursor = System.Windows.Forms.Cursors.Default;
